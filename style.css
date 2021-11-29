@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(60deg, white, dimgray);
+    /* font-family: 'Nanum Pen Script'; */
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+}
+form button{
+    background-color: silver;
+    /* color: rgb(145, 214, 7); */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover{
+    background: dimgray;
+    /* color: white; */
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo{
+    margin: 0.2rem;
+    background: white;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.todo-item{
+    flex: 1;
+    padding: 0.5rem 1rem;
+}
+
+.checked-btn, .delete-btn{
+    background: silver;
+    color: black;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    margin: 0.1rem;
+}
+
+.checked-btn{
+    background: rgb(226, 151, 226);
+}
+
+.delete-btn{
+    background: skyblue;
+}
+
+.fa-apple-pay, .fa-app-store-ios {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+
+    width: 10rem;
+    color: black;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after{
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    content: '\25BC';
+    position: absolute;
+    background: silver;
+}
+
+.select:hover::after{
+    background: dimgray;
+    color: white;
+}
